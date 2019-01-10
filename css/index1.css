@@ -1,7 +1,7 @@
 /* 头部块样式 */
 .header {
     background-color: #fff;
-    border-bottom: 1px solid #4e72b8;
+    /* border-bottom: 1px solid #4e72b8; */
     position: relative;
 }
 .logo h3 {
@@ -21,43 +21,41 @@
 #register {
     flex: 1;
     width: 100%;
-    background: #2a5caa;
+    /* background: #2a5caa; */
+    background-color: rgba(30, 144, 255, .5);
     /* background-size: cover; */
 }
 .page {
-    width: 25%;
-    background-color: #fff;
-    margin: 3% auto;
+    width: 30%;
+    background-color: rgba(255, 255, 255, .8);
+    margin: 0 auto;
+    margin-top: 4%;
     border-radius: 10px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 3);
 }
 
 /* 登录注册标题 */
 .title {
     width: 100%;
-    display: flex;
+    border-bottom: 2px solid #2a5caa;
 }
 .title span {
-    flex: 1;
     font-size: 20px;
     text-align: center;
     line-height: 70px;
-    cursor: pointer;
 }
-.active {
-    border-bottom: 2px solid #2a5caa;
-}
-
 /* 登录信息 */
 .register-user {
+    /* width: 100%; */
     padding: 30px 0;
+}
+.inputInfo {
     padding-left: 30px;
     padding-right: 60px;
 }
 .uName, .uPassword, .checkCode {
-    width: 100%;
-    /* background-color: pink; */
+    /* width: 100%; */
     position: relative;
-    /* line-height: 40px; */
     margin-bottom: 20px;
 }
 .username, .password, .code {
@@ -80,6 +78,10 @@
     font-size: 24px;
     left: 4px;
 } 
+/* 登录按钮样式 */
+.loginButton {
+    padding: 0 30px;
+}
 .dobutton {
     color: #fff;
     border: none;
@@ -88,13 +90,14 @@
     height: 40px;
     background-color: #2a5caa;
     border-radius: 6px;
+    cursor: pointer;
 }
 
 /* 底部样式 */
 .footer {
     width: 100%;
     background-color: #fff;
-    font-size: 15px;
+    font-size: 13px;
     line-height: 60px;
 }
 .footer-tips a:hover {
