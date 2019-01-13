@@ -17,21 +17,57 @@
     line-height: 80px;
     font-size: 24px;
 }
+/* 联系方式样式 */
+@media screen and (max-device-width: 768px) {
+    .contact {
+        display: none;
+    }
+}
+.contact {
+    line-height: 70px;
+    margin-right: 100px;
+    font-size: 16px;
+    position: relative;
+}
+.contact span:last-of-type {
+    padding: 0 5px;
+    color: #ccc;
+}
+.contact i:last-of-type {
+    font-size: 20px;
+}
+.contact .qrCode {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    display: none;
+    /* border: 1px solid #ccc; */
+}
+.contact .qrCode img {
+    width: 130px;
+    border: 7px solid #ccc;
+    /* border-top: none; */
+}
 /* 登录窗口样式 */
 #register {
     flex: 1;
     width: 100%;
-    /* background: #2a5caa; */
-    background-color: rgba(30, 144, 255, .5);
-    /* background-size: cover; */
+    background: url('../images/03.jpg') no-repeat center;
+    /* background-color: rgba(30, 144, 255, .5); */
+    background-size: cover;
 }
 .page {
-    width: 30%;
-    background-color: rgba(255, 255, 255, .8);
-    margin: 0 auto;
-    margin-top: 4%;
+    width: 25%;
+    min-width: 300px;
+    background-color: rgba(255, 255, 255, .5);
+    /* margin: 0 auto; */
+    /* margin-top: 8%; */
     border-radius: 10px;
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 3);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
 }
 
 /* 登录注册标题 */
@@ -42,7 +78,7 @@
 .title span {
     font-size: 20px;
     text-align: center;
-    line-height: 70px;
+    line-height: 60px;
 }
 /* 登录信息 */
 .register-user {
@@ -54,23 +90,31 @@
     padding-right: 60px;
 }
 .uName, .uPassword, .checkCode {
-    /* width: 100%; */
     position: relative;
     margin-bottom: 20px;
 }
 .username, .password, .code {
     width: 100%;
-    border: none;
-    outline: none;
     height: 40px;
     padding-left: 30px;
     font-size: 16px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 10px;
 
 }
 .checkCode .code {
+    width: 80px;
+}
+.checkCode .convas {
+    position: absolute;
     width: 100px;
+    height: 40px;
+    border: 1px solid #ccc;
+    top: 0;
+    left: 57%;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
 }
 .icon-renwu, .icon-mima, .icon-webicon203 {
     position: absolute;
@@ -84,26 +128,59 @@
 }
 .dobutton {
     color: #fff;
-    border: none;
-    outline: none;
     width: 100%;
     height: 40px;
     background-color: #2a5caa;
     border-radius: 6px;
     cursor: pointer;
 }
-
-/* 底部样式 */
-.footer {
+/* 弹出框样式 */
+.showTip, .error {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    padding: 10px 30px;
+    border-radius: 5px;
+    transform: translateX(-50%) translateY(-50%);
+    display: none;
+}
+.showTip {
+    width: 250px;
+    background-color: rgba(255, 255, 255, .8);
+}
+.icon-guanbi {
+    font-size: 20px;
+    cursor: pointer;
+}
+.phoneCode {
+    padding-right: 5px;
+}
+.phoneCode input {
+    height: 40px;
+    margin: 5px 0;
     width: 100%;
+    border: 1px solid #ccc; 
+    border-radius: 10px;
+    padding-left: 5px;
+}
+.tipButton {
+    padding: 20px 0;
+}
+.tipButton button {
+    padding: 6px 15px;
+    color: #000;
     background-color: #fff;
-    font-size: 13px;
-    line-height: 60px;
+    border-radius: 5px;
+    cursor: pointer;
 }
-.footer-tips a:hover {
-    color: #4e72b8;
+.tipButton button:first-of-type {
+    background-color: #2a5caa;
+    color: #fff;
 }
-.footer-tips span {
-    color: #102b6a;
-    margin: 0 8px;
+/* 错误提示框 */
+.error {
+    width: 115px;
+    background-color: #333;
+    color: #fff;
+    line-height: 50px;
 }

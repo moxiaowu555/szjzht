@@ -31,7 +31,17 @@ p, input, h3, div, body, span, i, header, a {
 .tr {
     text-align: right;
 }
+.tl {
+    text-align: left;
+}
+.font-weiht {
+    font-weight: 700;
+}
 a {
     text-decoration: none;
     color: #000;
+}
+button, input {
+    border: none;
+    outline: none;
 }
